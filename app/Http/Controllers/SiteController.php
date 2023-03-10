@@ -29,4 +29,13 @@ class SiteController extends Controller
 
         return view('sair');
     }
+
+    /* Request: pegar dados enviados pelo usuário, seja via formulário ou diretamente na URL */
+    public function users(Request $r) {
+
+        $data = [
+            'quantidade' => $r->qnt
+        ];
+        return view('usuarios', $data);
+    }
 }
