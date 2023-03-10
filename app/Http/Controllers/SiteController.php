@@ -12,8 +12,16 @@ class SiteController extends Controller
     Verificar se um usuarios existe
     Buscar dados de um usuarios, etc....*/
 
+        $nome = 'Miquéias';
+        $idade = 100;
 
-        return view('bemvindo');
+        $data = [
+            'apelido_nome' => $nome,
+            'apelido_idade' => $idade
+        ];
+
+
+        return view('bemvindo', $data);
 
     }
 
