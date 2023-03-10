@@ -17,11 +17,18 @@ class SiteController extends Controller
 
         $data = [
             'apelido_nome' => $nome,
-            'apelido_idade' => $idade
+            'apelido_idade' => $idade,
+            'html' => '<b style="color=red">Negrito</b>'
         ];
 
+        $bolo = [
+            'ingredientes' => ['trazer' => 'farinha','ovos','leite','chocolate',],
 
-        return view('bemvindo', $data);
+            'ingredientes2' => ['farinha','ovos','leite','chocolate',],
+            ];
+
+
+        return view('bemvindo', $data, $bolo);
 
     }
 
